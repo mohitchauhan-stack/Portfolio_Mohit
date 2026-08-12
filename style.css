@@ -1,0 +1,218 @@
+/* FONT FAMILIES */
+@font-face {
+  font-family: "Supreme-Extralight";
+  src: url("./font-Supreme/Supreme-Extralight.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Supreme-Light";
+  src: url("./font-Supreme/Supreme-Light.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Supreme-Regular";
+  src: url("./font-Supreme/Supreme-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT CLASSES */
+:root {
+  /* -- dark mode - Colors -- */
+  /* -- color - colors -- */
+  --color-xLight: hsl(0, 0%, 90%);
+  --color-Light: hsl(0, 0%, 85%);
+  --color-Neutral: hsl(0, 0%, 80%);
+  --color-Dark: hsl(0, 0%, 75%);
+  --color-xDark: hsl(0, 0%, 12%);
+  /* -- text - colors -- */
+  --text-dark: hsl(0, 0%, 10%);
+  --text-muted: hsl(0, 0%, 50%);
+  /* -- border - colors -- */
+  --border: hsl(0, 0%, 50%);
+  --border-d: hsl(0, 0%, 10%);
+  /* -- gradient - colors -- */
+  --gradient: linear-gradient(0deg, var(--color-xLight), var(--color-xDark));
+  /* -- highlighted - colors -- */
+  --highlight: hsl(0, 0%, 2%);
+  /* -- border - card -- */
+  --border-card: 0.5px solid var(--border);
+  --border-card-d: 1.2px solid var(--border-d);
+  /* -- shadow - color -- */
+  --shadow:
+    0px 2px 2px hsla(0, 0%, 100%, 0.07), 0px 4px 4px hsla(0, 0%, 100%, 0.15);
+  --brand-shadow:
+    0px 1.5px 1.5px hsl(0, 95%, 78%), 0px 3.5px 3.5px hsl(358, 32%, 23%);
+  --text-shadow: 0px 8px 8px var(--brand-secondary);
+  /* -- brand - colors -- */
+  --brand-primary: hsl(0, 87%, 34%);
+  --brand-secondary: rgb(129, 3, 3);
+
+  /* FONT SIZES */
+  --text-sm: 1.2rem;
+  --text-base: 1.6rem;
+  --text-paragraph: 1.6rem;
+  --text-h5: 5rem;
+  --text-h4: 3rem;
+  --text-h3: 4rem;
+  --text-h2: 6rem;
+  --text-h1: 10rem;
+
+  /* FONT FAMILY */
+  --font-ExtraLight: "Supreme-Extralight";
+  --font-Regular: "Supreme-Regular";
+  --font-Light: "Supreme-Light";
+
+  /* MARGIN INLINE */
+  --margin-inline-small: 0rem 2rem;
+  --margin-inline-medium: 0rem 4rem;
+  --margin-inline-large: 0rem 6rem;
+  /* MARGIN BLOCK */
+  --margin-block-small: 3rem 0rem;
+  --margin-block-medium: 5rem 0rem;
+  --margin-block-large: 8rem 0rem;
+  --margin-block-xlarge: 12rem 0rem;
+  --margin-block-xxlarge: 25rem 0rem;
+
+  /* -- Spacing - Variables -- */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-2xl: 4rem;
+  --space-3xl: 4.8rem;
+  --space-4xl: 8.8rem;
+
+  /* -- Border - Color -- */
+  --border-color: rgb(181, 181, 181);
+
+  /* -- Border - Radius -- */
+  --border-radius-xs: 0.4rem;
+  --border-radius-sm: 0.8rem;
+  --border-radius-md: 1.6rem;
+  --border-radius-lg: 2.4rem;
+  --border-radius-xl: 3.2rem;
+  --border-radius-2xl: 4rem;
+  --border-radius-3xl: 4.8rem;
+
+  /* -- nav - Height -- */
+  --nav-height: 11rem;
+
+  /* -- Z - indexes -- */
+  --z-10: 10;
+  --z-100: 100;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family:
+    var(--font-Regular), var(--font-Light), Arial, Helvetica, sans-serif;
+  color: var(--text-light);
+}
+
+h1 {
+  font-size: var(--text-h1);
+  line-height: 1;
+}
+h2 {
+  font-size: var(--text-h2);
+  line-height: 1;
+}
+h3 {
+  font-size: var(--text-h3);
+  line-height: 1;
+}
+h4 {
+  font-size: var(--text-h4);
+  line-height: 1;
+}
+h5 {
+  font-size: var(--text-h5);
+}
+p {
+  font-size: var(--text-paragraph);
+}
+a {
+  text-decoration: none;
+  font-size: var(--text-base);
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  color: var(--text-light);
+  cursor: pointer;
+}
+a:hover,
+a:active {
+  color: var(--brand-primary);
+  /* text-shadow: var(--text-shadow); */
+}
+ul {
+  list-style: none;
+}
+span {
+  display: inline-block;
+}
+.small-text {
+  font-size: var(--text-sm);
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1950px;
+  width: 100%;
+  height: max-content;
+  margin: 0 auto;
+  padding-top: var(--nav-height);
+  /* overflow: hidden; */
+  align-self: center;
+  flex-direction: column;
+  /* background-color: rebeccapurple; */
+}
+
+/* -------------------  NAV - BAR ----------------------- */
+.nav {
+  height: var(--nav-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: var(--space-xs);
+  margin: 0 auto;
+
+  box-sizing: border-box;
+  box-shadow: 1px 0.5px 10px var(--border);
+  backdrop-filter: blur(15px);
+  z-index: var(--z-100);
+}
+.logo_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* -------------------  HERO - HEADING - SECTION ----------------------- */
+.hero_heading {
+  height: 100vh;
+}
+
+.hero_text {
+  padding-top: var(--space-4xl);
+}
