@@ -31,7 +31,7 @@
 :root {
   /* -- dark mode - Colors -- */
   /* -- color - colors -- */
-  --color-xLight: hsl(0, 0%, 90%);
+  --color-xLight: hsl(0, 0%, 98%);
   --color-Light: hsl(0, 0%, 85%);
   --color-Neutral: hsl(0, 0%, 80%);
   --color-Dark: hsl(0, 0%, 75%);
@@ -60,14 +60,15 @@
   --brand-secondary: rgb(129, 3, 3);
 
   /* FONT SIZES */
-  --text-sm: 1.2rem;
-  --text-base: 1.6rem;
-  --text-paragraph: 1.6rem;
-  --text-h5: 5rem;
-  --text-h4: 3rem;
-  --text-h3: 4rem;
-  --text-h2: 6rem;
-  --text-h1: 10rem;
+  --text-sm: 2rem;
+  --text-base: 2.8rem;
+  --text-paragraph: 3rem;
+  --text-h6: 4.5rem;
+  --text-h5: 5.5rem;
+  --text-h4: 7rem;
+  --text-h3: 10rem;
+  --text-h2: 12rem;
+  --text-h1: 15rem;
 
   /* FONT FAMILY */
   --font-ExtraLight: "Supreme-Extralight";
@@ -93,7 +94,7 @@
   --space-xl: 3.2rem;
   --space-2xl: 4rem;
   --space-3xl: 4.8rem;
-  --space-4xl: 8.8rem;
+  --space-4xl: 15rem;
 
   /* -- Border - Color -- */
   --border-color: rgb(181, 181, 181);
@@ -120,8 +121,7 @@ html {
 }
 
 body {
-  font-family:
-    var(--font-Regular), var(--font-Light), Arial, Helvetica, sans-serif;
+  font-family: var(--font-Light), Arial, Helvetica, sans-serif;
   color: var(--text-light);
 }
 
@@ -143,6 +143,9 @@ h4 {
 }
 h5 {
   font-size: var(--text-h5);
+}
+h6 {
+  font-size: var(--text-h6);
 }
 p {
   font-size: var(--text-paragraph);
@@ -166,8 +169,12 @@ ul {
 span {
   display: inline-block;
 }
-.small-text {
-  font-size: var(--text-sm);
+.text_muted {
+  color: var(--text-muted);
+}
+.text_high {
+  color: var(--highlight);
+  font-family: var(--font-Regular);
 }
 .flex {
   display: flex;
@@ -199,7 +206,7 @@ span {
 
   box-sizing: border-box;
   box-shadow: 1px 0.5px 10px var(--border);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
   z-index: var(--z-100);
 }
 .logo_img {
@@ -210,9 +217,45 @@ span {
 
 /* -------------------  HERO - HEADING - SECTION ----------------------- */
 .hero_heading {
-  height: 100vh;
+  height: calc(100vh - var(--nav-height));
 }
 
 .hero_text {
   padding-top: var(--space-4xl);
+}
+
+.big_hero_text {
+  margin: var(--margin-block-large);
+}
+
+/* -------------------  ABOUT - ME - SECTION ----------------------- */
+.about_head {
+  margin-bottom: var(--space-4xl);
+}
+
+.about_content{
+  align-items: flex-start;
+}
+.about_p{
+  margin-bottom: var(--space-2xl);
+  width: 80%;
+}
+
+.my_image{
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.skills{
+  justify-content: flex-start;
+  gap: var(--space-2xl);
+}
+
+.skill{
+  background-color: var(--color-xDark);
+  padding: var(--space-lg);
+  color: var(--color-xLight);
+  border-radius: var(--border-radius-2xl);
 }
