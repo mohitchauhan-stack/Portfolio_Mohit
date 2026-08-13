@@ -38,7 +38,7 @@
   --color-xDark: hsl(0, 0%, 12%);
   /* -- text - colors -- */
   --text-dark: hsl(0, 0%, 10%);
-  --text-muted: hsl(0, 0%, 50%);
+  --text-muted: hsl(0, 0%, 48%);
   /* -- border - colors -- */
   --border: hsl(0, 0%, 50%);
   --border-d: hsl(0, 0%, 10%);
@@ -56,8 +56,8 @@
     0px 1.5px 1.5px hsl(0, 95%, 78%), 0px 3.5px 3.5px hsl(358, 32%, 23%);
   --text-shadow: 0px 8px 8px var(--brand-secondary);
   /* -- brand - colors -- */
-  --brand-primary: hsl(0, 87%, 34%);
-  --brand-secondary: rgb(129, 3, 3);
+  --brand-primary: #181c2e;
+  --brand-secondary: #2b3252;
 
   /* FONT SIZES */
   --text-sm: 2rem;
@@ -69,6 +69,7 @@
   --text-h3: 10rem;
   --text-h2: 12rem;
   --text-h1: 15rem;
+
 
   /* FONT FAMILY */
   --font-ExtraLight: "Supreme-Extralight";
@@ -95,6 +96,7 @@
   --space-2xl: 4rem;
   --space-3xl: 4.8rem;
   --space-4xl: 15rem;
+  --space-section: 40rem;
 
   /* -- Border - Color -- */
   --border-color: rgb(181, 181, 181);
@@ -123,6 +125,7 @@ html {
 body {
   font-family: var(--font-Light), Arial, Helvetica, sans-serif;
   color: var(--text-light);
+  background-color: var(--color-xLight);
 }
 
 h1 {
@@ -181,13 +184,24 @@ span {
   justify-content: center;
   align-items: center;
 }
+.btn{
+  background-color: var(--brand-secondary);
+  padding: var(--space-md);
+  border-radius: var(--border-radius-xs);
+  color: var(--color-xLight);
+  box-shadow: 3px 5px 2px var(--brand-primary);
+}
+.btn:hover{
+  color: var(--color-xLight);
+  box-shadow: 4px 6px 6px var(--brand-primary);
+}
 
 .container {
-  max-width: 1950px;
+  max-width: 1250px;
   width: 100%;
   height: max-content;
   margin: 0 auto;
-  padding-top: var(--nav-height);
+  padding: var(--nav-height);
   /* overflow: hidden; */
   align-self: center;
   flex-direction: column;
@@ -212,12 +226,14 @@ span {
 .logo_img {
   width: 100px;
   height: 100px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
 /* -------------------  HERO - HEADING - SECTION ----------------------- */
 .hero_heading {
-  height: calc(100vh - var(--nav-height));
+  /* height: calc(100vh - var(--nav-height)); */
+  margin-bottom: var(--space-section);
 }
 
 .hero_text {
@@ -229,6 +245,10 @@ span {
 }
 
 /* -------------------  ABOUT - ME - SECTION ----------------------- */
+.about_me{
+  margin: var(--margin-block-xlarge);
+}
+
 .about_head {
   margin-bottom: var(--space-4xl);
 }
@@ -237,7 +257,7 @@ span {
   align-items: flex-start;
 }
 .about_p{
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
   width: 80%;
 }
 
@@ -251,11 +271,47 @@ span {
 .skills{
   justify-content: flex-start;
   gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
 }
 
 .skill{
   background-color: var(--color-xDark);
-  padding: var(--space-lg);
+  padding: var(--space-md);
   color: var(--color-xLight);
-  border-radius: var(--border-radius-2xl);
+  border-radius: var(--border-radius-md);
+}
+
+.about_btns{
+  gap: var(--space-lg);
+  justify-content: flex-start;
+}
+
+.social{
+  background-color: var(--color-xDark);
+  padding: var(--space-md);
+  color: var(--color-xLight);
+  border-radius: var(--border-radius-md);
+}
+
+.social:hover{
+  scale: 1.05;
+  color: aliceblue;
+}
+
+
+
+
+/* -------------------  PROOF - Of - WORK ----------------------- */
+.proof_of_work{
+  margin: var(--margin-block-xlarge);
+}
+
+
+
+.project_heading{
+  margin: var(--margin-block-large);
+}
+
+.proj_img{
+  width: 100%;
 }
