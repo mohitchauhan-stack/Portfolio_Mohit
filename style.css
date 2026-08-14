@@ -57,7 +57,7 @@
   --text-shadow: 0px 8px 8px var(--brand-secondary);
   /* -- brand - colors -- */
   --brand-primary: #181c2e;
-  --brand-secondary: #2b3252;
+  --brand-secondary: #3b3d47;
 
   /* FONT SIZES */
   --text-sm: 2rem;
@@ -308,7 +308,7 @@ span {
 }
 
 .about_p{
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
   width: 100%;
 }
 
@@ -317,16 +317,68 @@ span {
 /* -------------------  HERO - HEADING - SECTION ----------------------- */
 .skills{
   margin-block: var(--space-section);
-  height: 100vh;
-}
-
-.skills_type{
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
+  gap: var(--space-4xl);
 }
 
-.skills_row{
+.skills_container{
+  flex-direction: column;
   align-items: flex-start;
+  gap: var(--space-3xl);
+}
+
+.hands_on{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xl);
+}
+
+
+.skills_imgs{
+  display: flex;
+  gap: var(--space-4xl);
+}
+
+
+
+.skill_content{
+  /* display: flex; */
   justify-content: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm) ;
+  cursor: pointer;
+  box-shadow: 4px 4px 2px var(--brand-primary);
+}
+
+.html{
+  background-color: #FF8C5B;
+}
+.css{
+  background-color: #72C9FF;
+}
+.js{
+  background-color: #ffef75;
+  color: var(--color-xDark);
+  
+}
+.js_logo{
+box-shadow: 2px 2px 8px var(--color-xDark);
+}
+.react{
+  background-color: #001111;
+  color: var(--color-xLight);
+}
+.node{
+  background-color: #e8ffff;
+  color: var(--color-xDark);
+}
+.mongo{
+  background-color: #b4e7ff;
+  color: #01684A;
+}
+
+
+.skill_logo{
+  width: 30px;
 }
