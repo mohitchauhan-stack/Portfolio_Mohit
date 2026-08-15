@@ -27,6 +27,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 /* ROOT CLASSES */
 :root {
   /* -- dark mode - Colors -- */
@@ -119,9 +123,7 @@
   --z-100: 100;
 }
 
-html {
-  font-size: 62.5%;
-}
+
 
 body {
   font-family: var(--font-Light), Arial, Helvetica, sans-serif;
@@ -341,8 +343,12 @@ span {
 
 
 .skills_imgs{
-  display: flex;
-  gap: var(--space-4xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: var(--space-md);
+  grid-template-areas:
+  "skill_1 skill_2 skill_3 skill_4";
 }
 
 
