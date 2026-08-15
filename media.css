@@ -106,7 +106,7 @@
 
 
 /* 768x = 48rem */
-@media screen and (max-width: 59.5rem) {
+@media screen and (max-width: 48rem) {
   :root{
     /* -- nav - Height -- */
     --nav-height: 8rem;

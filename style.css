@@ -1,22 +1,22 @@
 /* FONT FAMILIES */
 @font-face {
-  font-family: "Supreme-Extralight";
+  font-family: "Supreme";
   src: url("./font-Supreme/Supreme-Extralight.ttf") format("truetype");
-  font-weight: 800;
+  font-weight: 200;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
-  font-family: "Supreme-Light";
+  font-family: "Supreme";
   src: url("./font-Supreme/Supreme-Light.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
-  font-family: "Supreme-Regular";
+  font-family: "Supreme";
   src: url("./font-Supreme/Supreme-Regular.ttf") format("truetype");
-  font-weight: 500;
+  font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
@@ -40,6 +40,7 @@ html {
   --color-Neutral: hsl(0, 0%, 80%);
   --color-Dark: hsl(0, 0%, 75%);
   --color-xDark: hsl(0, 0%, 12%);
+  --color-dark: hsl(0, 0%, 75%);
   /* -- text - colors -- */
   --text-dark: hsl(0, 0%, 10%);
   --text-muted: hsl(0, 0%, 40%);
@@ -126,8 +127,8 @@ html {
 
 
 body {
-  font-family: var(--font-Light), Arial, Helvetica, sans-serif;
-  color: var(--text-light);
+  font-family: "Supreme", Arial, Helvetica, sans-serif;
+   color: var(--text-dark);
   background-color: var(--color-xLight);
 }
 
@@ -174,7 +175,7 @@ a {
   font-size: var(--text-base);
   display: inline-block;
   transition: all 0.3s ease-in-out;
-  color: var(--text-light);
+  color: var(--text-dark);
   cursor: pointer;
 }
 a:hover,
@@ -202,7 +203,7 @@ span {
 }
 .text_base{
   font-size: var(--text-base);
-  color: var(--color-dark);
+  color: var(--text-dark);
 }
 .flex {
   display: flex;
@@ -300,8 +301,6 @@ span {
   margin-bottom: var(--space-section);
 
 }
-
-
 
 .big_hero_text {
   margin: var(--margin-block-xlarge);
@@ -417,11 +416,6 @@ box-shadow: 2px 2px 8px var(--color-xDark);
 }
 
 .projects_container{
-  /* width: 100%; */
-  /* align-items: flex-start; */
-  /* flex-direction: row;
-  justify-content: space-between; */
-  /* gap: var(--space-xl); */
   display: grid;
   width: 100%;
     grid-template-columns: 1fr 1fr;
@@ -434,7 +428,7 @@ box-shadow: 2px 2px 8px var(--color-xDark);
 .project_box{
   align-items: flex-start;
   flex-direction: column;
-  width: 780px;
+  width: 100%;
   background-color: var(--color-Light);
   padding: var(--space-sm);
 }
